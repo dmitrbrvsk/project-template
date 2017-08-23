@@ -1,3 +1,23 @@
+include /blocks/logo/logo
+
 mixin survey()
 	+b.survey&attributes(attributes)
-		+e.icon(src="/csssr.png")
+		+logo()
+		+e.item
+			+e.LABEL.label Полное ФИО
+			+e.INPUT.input
+			+e.LABEL.label Год рождения
+			+e.INPUT.input
+			+e.LABEL.label Место жительства
+			+e.INPUT.input
+			+e.LABEL.label Скайп
+			+e.INPUT.input
+			+e.LABEL.label Почта
+			+e.INPUT.input
+		+e.item
+			+e.INPUT(type='checkbox' id='id1').checkbox l
+		+e.item
+		+e.item
+		+e.item
+		+e.item
+		
