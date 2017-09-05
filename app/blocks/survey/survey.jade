@@ -1,13 +1,14 @@
 include /blocks/logo/logo
 include /blocks/about-skills/about-skills
 include /blocks/slider-proficiency/slider-proficiency
+include /blocks/about/about
+include /blocks/plans/plans
 
 mixin survey()
-	+b.survey&attributes(attributes)
+	+b('form').survey&attributes(attributes)
 		+logo()
-		+e('li').item
 		+e.item
-			+e('label').label Полное ФИОs
+			+e('label').label Полное ФИО
 			+e('input').input
 			+e('label').label Год рождения
 			+e('input').input
@@ -17,12 +18,8 @@ mixin survey()
 			+e('input').input
 			+e('label').label Почта
 			+e('input').input
-		+e.item
-			+e('input')(type='checkbox' id='id1').checkbox l
-		+e.item
-		+e.item
-		+e.item
-		+e.item
+
 		+about-skills(getData('skills'))
 		+slider-proficiency()
-
+		+about()
+		+plans(getData('plans'))

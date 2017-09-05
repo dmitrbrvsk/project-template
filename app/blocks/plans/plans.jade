@@ -1,0 +1,16 @@
+include /blocks/title/title
+include /blocks/description/description
+
+mixin plans(plans)
+	+b.plans&attributes(attributes)
+		+title()
+			| Какие у вас планы на будущее?
+		+description()
+			| Этот ответ ни на что не повлияет. 
+			| Не беда, если в будущем ваши планы поменяются.
+
+		+e('ul').list
+			each plan in plans
+				+e('li').item
+					+e('input')(type='radio', name='selector')
+					+e('label').label #{plan}
