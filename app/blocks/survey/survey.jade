@@ -1,23 +1,28 @@
 include /blocks/logo/logo
+include /blocks/about-skills/about-skills
+include /blocks/slider-proficiency/slider-proficiency
 
 mixin survey()
 	+b.survey&attributes(attributes)
 		+logo()
+		+e('li').item
 		+e.item
-			+e.LABEL.label Полное ФИО
-			+e.INPUT.input
-			+e.LABEL.label Год рождения
-			+e.INPUT.input
-			+e.LABEL.label Место жительства
-			+e.INPUT.input
-			+e.LABEL.label Скайп
-			+e.INPUT.input
-			+e.LABEL.label Почта
-			+e.INPUT.input
+			+e('label').label Полное ФИОs
+			+e('input').input
+			+e('label').label Год рождения
+			+e('input').input
+			+e('label').label Место жительства
+			+e('input').input
+			+e('label').label Скайп
+			+e('input').input
+			+e('label').label Почта
+			+e('input').input
 		+e.item
-			+e.INPUT(type='checkbox' id='id1').checkbox l
-		+e.item
-		+e.item
+			+e('input')(type='checkbox' id='id1').checkbox l
 		+e.item
 		+e.item
+		+e.item
+		+e.item
+		+about-skills(getData('skills'))
+		+slider-proficiency()
 		

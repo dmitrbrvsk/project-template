@@ -1,0 +1,6 @@
+mixin about-skills(skills)
+	+b.about-skills&attributes(attributes)
+		+e.title Расскажите о себе чекбоксами
+		+e.description Отметьте чекбоксами пункты, которые...
+		each item in skills
+			+e('li').item #{ item }
